@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prepositions at the End · Questions · Caroline</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0b09;--ink2:#35302a;--ink3:#7a7468;
+  --bg:#f8f5f0;--s2:#ede9e0;--s3:#ddd8cc;
+  --acc:#1a6a52;--al:#e5f2ed;
+  --blue:#2058b8;--bl:#e6edf8;
+  --ok:#1a6248;--okl:#e2f2eb;
+  --err:#9a1a1a;--errl:#fceaea;
+  --gold:#8a6010;--gol:#faf0d0;
+  --serif:"DM Serif Display",Georgia,serif;
+  --sans:"DM Sans",system-ui,sans-serif;
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);margin:0;line-height:1.7}
+.hero{background:var(--ink);padding:2.5rem 2rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:rgba(26,106,82,.14);pointer-events:none}
+.hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.ey{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(26,106,82,.7);margin-bottom:.5rem}
+.h1{font-family:var(--serif);font-size:clamp(1.8rem,5vw,2.8rem);color:white;line-height:1.1;margin-bottom:.6rem}
+.h1 em{font-style:italic;color:#7fdbc4}
+.sub{font-size:13px;color:rgba(255,255,255,.45);max-width:540px;line-height:1.65}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:.9rem}
+.pill{font-size:11px;font-weight:600;padding:3px 11px;border-radius:100px;background:rgba(26,106,82,.22);color:#7fdbc4}
+.nav{background:var(--ink);border-top:1px solid rgba(255,255,255,.07);position:sticky;top:0;z-index:100}
+.nw{max-width:860px;margin:0 auto;display:flex;overflow-x:auto;padding:0 2rem}
+.tab{font-family:var(--sans);font-size:12px;font-weight:500;padding:.85rem 13px;border:none;background:transparent;color:rgba(255,255,255,.35);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .15s}
+.tab:hover{color:rgba(255,255,255,.7)}
+.tab.on{color:white;border-bottom-color:var(--acc)}
+.page{display:none;max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+.page.on{display:block}
+.sec{margin-bottom:2.5rem}
+.sl{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.sl::after{content:"";flex:1;height:.5px;background:var(--s3)}
+
+/* grammar box */
+.rule-box{background:white;border:1px solid var(--s3);border-radius:12px;overflow:hidden;margin-bottom:1.5rem}
+.rule-hd{background:var(--ink);color:rgba(255,255,255,.7);font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:9px 16px}
+.rule-b{padding:1.25rem 1.4rem}
+.rule-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.85rem}
+@media(max-width:560px){.rule-row{grid-template-columns:1fr}}
+.rule-cell{background:var(--bg);border-radius:9px;padding:11px 13px;border:1px solid var(--s2)}
+.rc-tag{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;display:block;margin-bottom:5px}
+.rc-ok{color:var(--ok)}
+.rc-err{color:var(--err)}
+.rc-txt{font-size:14px;color:var(--ink);line-height:1.65}
+.rc-sub{font-size:12px;color:var(--ink3);margin-top:3px;font-style:italic}
+.tip{padding:10px 14px;font-size:13px;line-height:1.65;border-radius:0 10px 10px 0;margin-top:.75rem}
+.tip strong{font-weight:600;display:block;margin-bottom:2px}
+.tip-g{background:var(--okl);border-left:3px solid var(--ok);color:#073d22}
+.tip-a{background:#fdf0e8;border-left:3px solid var(--acc);color:#2a1000}
+.tip-b{background:var(--bl);border-left:3px solid var(--blue);color:#0a1e45}
+
+/* ref table */
+.ref-table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden;border:1px solid var(--s3);margin-top:.5rem}
+.ref-table th{background:var(--ink);color:rgba(255,255,255,.6);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;text-align:left}
+.ref-table td{padding:10px 14px;font-size:13.5px;border-bottom:1px solid var(--s2);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table tr:hover td{background:var(--bg)}
+.prep-end{font-weight:700;color:var(--acc)}
+.corp-ex{font-size:12px;color:var(--ink3);font-style:italic;margin-top:2px;line-height:1.5}
+
+/* score row */
+.prow{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem}
+.pwrap{flex:1;background:var(--s3);border-radius:100px;height:4px;overflow:hidden}
+.pfill{height:100%;background:var(--acc);border-radius:100px;width:0%;transition:width .5s}
+.ptxt{font-size:11px;color:var(--ink3);white-space:nowrap}
+
+/* question cards */
+.qcard{background:white;border:1px solid var(--s3);border-radius:12px;margin-bottom:1rem;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.qcard.ok{border-color:var(--ok);box-shadow:0 0 0 3px rgba(26,98,72,.07)}
+.qcard.err{border-color:var(--err);box-shadow:0 0 0 3px rgba(154,26,26,.07)}
+.qn{background:var(--s2);padding:7px 14px;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--s3)}
+.qb{padding:1.1rem 1.4rem}
+.qctx{font-size:12px;color:var(--ink3);font-style:italic;margin-bottom:.6rem;padding:6px 10px;background:var(--bg);border-radius:6px;border-left:2px solid var(--s3)}
+.qs{font-size:15px;color:var(--ink);line-height:1.9;margin-bottom:.9rem}
+.blank{display:inline-block;min-width:70px;border-bottom:2.5px dashed var(--s3);text-align:center;padding:0 6px;color:var(--ink3);font-style:italic;vertical-align:middle;font-size:14px;transition:all .2s}
+.blank.ok{border-bottom:2.5px solid var(--ok);color:var(--ok);font-weight:700;font-style:normal}
+.blank.err{border-bottom:2.5px solid var(--err);color:var(--err);font-weight:700;font-style:normal}
+.choices{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:.7rem}
+.choices.col{flex-direction:column}
+.btn{font-family:var(--sans);font-size:13px;font-weight:500;padding:7px 15px;border-radius:100px;border:1.5px solid var(--s3);background:var(--bg);color:var(--ink2);cursor:pointer;transition:all .15s;text-align:left;user-select:none}
+.btn:hover:not([disabled]){background:var(--al);border-color:var(--acc);color:var(--acc)}
+.btn.ok{background:var(--okl);border-color:var(--ok);color:var(--ok);font-weight:600}
+.btn.err{background:var(--errl);border-color:var(--err);color:var(--err)}
+.btn.rv{background:var(--okl);border-color:var(--ok);color:var(--ok);font-weight:600}
+.btn[disabled]{cursor:default}
+.fb{display:none;font-size:13px;line-height:1.6;padding:10px 13px;border-radius:0 10px 10px 0;margin-top:.3rem}
+.fb.show{display:block}
+.fb-ok{background:var(--okl);border-left:3px solid var(--ok);color:#073d22}
+.fb-err{background:var(--errl);border-left:3px solid var(--err);color:#5e0808}
+.fb strong{font-weight:600}
+
+/* reorder drag */
+.reorder-wrap{display:flex;flex-direction:column;gap:8px;margin-bottom:.8rem}
+.word-pool{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:.6rem;min-height:36px;padding:6px;background:var(--bg);border:1.5px dashed var(--s3);border-radius:9px}
+.answer-slots{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-height:42px;padding:8px 10px;background:white;border:1.5px solid var(--s3);border-radius:9px}
+.wchip{font-family:var(--sans);font-size:13px;font-weight:500;padding:6px 13px;border-radius:100px;border:1.5px solid var(--s3);background:white;color:var(--ink2);cursor:pointer;transition:all .12s;user-select:none}
+.wchip:hover{background:var(--al);border-color:var(--acc);color:var(--acc)}
+.wchip.placed{background:var(--al);border-color:var(--acc);color:var(--acc)}
+.wchip.correct{background:var(--okl);border-color:var(--ok);color:var(--ok);cursor:default}
+.wchip.wrong{background:var(--errl);border-color:var(--err);color:var(--err)}
+.slot-label{font-size:11px;color:var(--ink3);margin-right:4px}
+.check-btn{font-family:var(--sans);font-size:12px;font-weight:600;padding:7px 18px;border-radius:100px;border:none;background:var(--acc);color:white;cursor:pointer;transition:opacity .15s;margin-top:.4rem}
+.check-btn:hover{opacity:.85}
+.check-btn[disabled]{opacity:.4;cursor:default}
+
+/* score card */
+.scr{background:white;border:1px solid var(--s3);border-radius:12px;padding:2.5rem;text-align:center;margin-top:2rem;display:none}
+.scr.show{display:block}
+.scr-t{font-family:var(--serif);font-size:1.4rem;margin-bottom:.4rem}
+.scr-n{font-family:var(--serif);font-size:3.5rem;line-height:1;color:var(--acc);margin-bottom:.3rem}
+.scr-m{font-size:14px;color:var(--ink2)}
+.sbar{background:var(--s2);border-radius:100px;height:7px;margin:.7rem auto;max-width:260px;overflow:hidden}
+.sbar-f{height:100%;background:var(--acc);border-radius:100px;width:0%;transition:width .9s ease}
+.rbtn{font-family:var(--sans);font-size:13px;background:transparent;border:1.5px solid var(--s3);border-radius:8px;padding:8px 22px;cursor:pointer;color:var(--ink2);margin-top:.7rem;transition:all .15s}
+.rbtn:hover{border-color:var(--ink);color:var(--ink)}
+
+/* production */
+.prod-card{background:white;border:1px solid var(--s3);border-radius:12px;margin-bottom:1rem;overflow:hidden}
+.prod-hd{background:var(--s2);padding:8px 14px;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--s3)}
+.prod-b{padding:1.1rem 1.4rem}
+.prod-prompt{font-size:14px;color:var(--ink);line-height:1.7;margin-bottom:.75rem}
+.prod-cue{display:inline-block;background:var(--al);color:var(--acc);font-weight:700;font-size:13px;padding:2px 10px;border-radius:100px;border:1px solid rgba(26,106,82,.25);margin-bottom:.75rem}
+.prod-ta{width:100%;border:1.5px solid var(--s3);border-radius:9px;padding:11px 13px;font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--bg);resize:vertical;min-height:72px;line-height:1.7;transition:border-color .15s;outline:none}
+.prod-ta:focus{border-color:var(--acc)}
+.show-btn{font-family:var(--sans);font-size:12px;font-weight:500;padding:7px 16px;border-radius:100px;border:1.5px solid var(--s3);background:transparent;color:var(--ink3);cursor:pointer;transition:all .15s;margin-top:.55rem}
+.show-btn:hover{border-color:var(--acc);color:var(--acc);background:var(--al)}
+.model-ans{display:none;margin-top:.65rem;font-size:13px;line-height:1.7;padding:11px 13px;background:var(--gol);border-radius:8px;border-left:3px solid var(--gold);color:#3a2a00}
+.model-ans.show{display:block}
+.model-ans strong{font-weight:600;display:block;margin-bottom:2px;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--gold)}
+
+/* speaking */
+.spcard{background:white;border:1px solid var(--s3);border-radius:12px;margin-bottom:1.25rem;overflow:hidden}
+.spcard-hd{padding:1rem 1.4rem;border-bottom:1px solid var(--s2);display:flex;gap:12px;align-items:flex-start}
+.badge{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:100px;flex-shrink:0;margin-top:3px}
+.bg{background:var(--okl);color:var(--ok)}
+.bb{background:var(--bl);color:var(--blue)}
+.stit{font-family:var(--serif);font-size:1rem;color:var(--ink);margin:0 0 1px}
+.smet{font-size:12px;color:var(--ink3)}
+.spbody{padding:1.1rem 1.4rem}
+.instr{font-size:13px;color:var(--ink2);font-style:italic;margin-bottom:1rem;padding-left:12px;border-left:2px solid var(--s3)}
+.tblock{background:var(--s2);border-radius:12px;padding:1.4rem;text-align:center;border:1px solid var(--s3)}
+.pbox{padding:13px 15px;background:white;border:1px solid var(--s3);border-radius:10px;text-align:left;margin-bottom:1.2rem}
+.ptag{font-size:10px;font-weight:600;color:var(--acc);letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:4px}
+.ptext{font-size:14px;color:var(--ink);line-height:1.7}
+.phint{font-size:12px;color:var(--blue);font-weight:600;margin-top:.5rem;display:block;font-style:italic}
+.dialbox{display:flex;flex-direction:column;align-items:center;margin-bottom:.9rem}
+.tsvg{width:88px;height:88px}
+.ring-bg{fill:none;stroke:var(--s3);stroke-width:9}
+.ring-fill{fill:none;stroke-width:9;stroke-linecap:round;transform-origin:44px 44px;transform:rotate(-90deg);transition:stroke-dashoffset 1s linear,stroke .3s}
+.tnum{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--ink);margin-top:.25rem;transition:color .3s}
+.tnum.hot{color:var(--err)}
+.tsub{font-size:11px;color:var(--ink3);margin-bottom:.9rem}
+.tbtns{display:flex;gap:7px;justify-content:center;margin-bottom:.65rem}
+.tbtn{font-family:var(--sans);font-size:12px;font-weight:500;padding:8px 18px;border-radius:8px;cursor:pointer;border:1.5px solid var(--s3);background:var(--s2);color:var(--ink2);transition:all .15s}
+.tbtn:hover:not([disabled]){background:white;color:var(--ink)}
+.tbtn.primary{background:var(--acc);color:white;border-color:var(--acc)}
+.tbtn[disabled]{opacity:.4;cursor:default}
+.pnav-row{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.pnav{font-family:var(--sans);font-size:12px;padding:4px 12px;border-radius:100px;border:1.5px solid var(--s3);background:transparent;color:var(--ink2);cursor:pointer;transition:all .15s}
+.pnav:hover{color:var(--ink)}
+.pnav.on{background:var(--ink);color:white;border-color:var(--ink);font-weight:500}
+.tdone{margin-top:.65rem;padding:10px 14px;background:var(--al);border-radius:8px;font-size:13px;color:#073d22;display:none;text-align:left}
+.tdone.show{display:block}
+.tdone strong{font-weight:600;display:block;margin-bottom:2px}
+.footer{border-top:1px solid var(--s3);padding:1.25rem 1.5rem;font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;max-width:860px;margin:0 auto}
+@media(max-width:580px){.nw{padding:0 .75rem}.tab{font-size:11px;padding:.8rem 10px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="ey">C1 · Prepositions at the End · Questions · Caroline · JDE Peet's</p>
+    <h1 class="h1">What are you<br><em>waiting for?</em></h1>
+    <p class="sub">Preposições no final de perguntas — a estrutura natural do inglês falado e escrito. Quatro perguntas-modelo, vocabulário corporativo, e prompts do mundo do café.</p>
+    <div class="pills">
+      <span class="pill">talking to?</span>
+      <span class="pill">looking at?</span>
+      <span class="pill">responsible for?</span>
+      <span class="pill">working with?</span>
+      <span class="pill">reporting to?</span>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nw">
+    <button class="tab on" onclick="go('t1',this)">Referência</button>
+    <button class="tab" onclick="go('t2',this)">Prática 1 — Lacunas</button>
+    <button class="tab" onclick="go('t3',this)">Prática 2 — Ordem</button>
+    <button class="tab" onclick="go('t4',this)">Produção</button>
+    <button class="tab" onclick="go('t5',this)">Speaking</button>
+  </div>
+</nav>
+
+<!-- TAB 1 — REFERÊNCIA -->
+<div class="page on" id="t1">
+<div style="padding-top:2rem">
+<section class="sec">
+<p class="sl">A estrutura</p>
+<div class="rule-box">
+  <div class="rule-hd">Preposition at the end — como funciona</div>
+  <div class="rule-b">
+    <div class="rule-row">
+      <div class="rule-cell">
+        <span class="rc-tag rc-err">❌ Formal / não natural na fala</span>
+        <p class="rc-txt">To whom are you talking?<br>For which brand are you responsible?<br>With whom did you meet?</p>
+        <p class="rc-sub">Estrutura com preposição no início — soa muito formal e rígida em inglês moderno.</p>
+      </div>
+      <div class="rule-cell">
+        <span class="rc-tag rc-ok">✓ Natural — inglês falado e escrito</span>
+        <p class="rc-txt">Who are you talking <strong>to</strong>?<br>Which brand are you responsible <strong>for</strong>?<br>Who did you meet <strong>with</strong>?</p>
+        <p class="rc-sub">Preposição no final — é assim que se fala e se escreve em contexto profissional real.</p>
+      </div>
+    </div>
+    <div class="tip tip-g"><strong>A fórmula</strong> Wh- + auxiliar + sujeito + verbo + <span style="color:var(--ok);font-weight:700">preposição?</span> — a preposição fica "encalhada" (stranded) no final, ligada ao verbo, não ao objeto. Pense em duplas que andam juntas: <em>talk TO, look AT, wait FOR, work WITH, report TO, deal WITH, focus ON, rely ON, ask FOR.</em></div>
+  </div>
+</div>
+</section>
+<section class="sec">
+<p class="sl">As 4 perguntas-modelo + o mundo corporativo</p>
+<table class="ref-table">
+  <thead><tr><th>Pergunta do dia a dia</th><th>Versão corporativa / JDE Peet's</th><th>Verbo + prep</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Who are you talking <span class="prep-end">to</span>?</td>
+      <td class="corp-ex">Who is this campaign brief addressed <span class="prep-end">to</span>? / Who are you presenting <span class="prep-end">to</span> next week?</td>
+      <td>talk / present / address → <strong>to</strong></td>
+    </tr>
+    <tr>
+      <td>What are you looking <span class="prep-end">at</span>?</td>
+      <td class="corp-ex">What data are you looking <span class="prep-end">at</span> for the Q4 review? / What market are you aiming <span class="prep-end">at</span>?</td>
+      <td>look / aim / target → <strong>at</strong></td>
+    </tr>
+    <tr>
+      <td>Who do you live <span class="prep-end">with</span>?</td>
+      <td class="corp-ex">Who are you working <span class="prep-end">with</span> on this launch? / Which agency are you collaborating <span class="prep-end">with</span>?</td>
+      <td>work / collaborate / deal → <strong>with</strong></td>
+    </tr>
+    <tr>
+      <td>What are you waiting <span class="prep-end">for</span>?</td>
+      <td class="corp-ex">Which result are you still waiting <span class="prep-end">for</span>? / What approval is the campaign waiting <span class="prep-end">for</span>?</td>
+      <td>wait / ask / apply → <strong>for</strong></td>
+    </tr>
+    <tr>
+      <td colspan="3" style="background:var(--bg);color:var(--ink3);font-size:12px;font-style:italic;padding:9px 14px">+ outros verbos corporativos frequentes</td>
+    </tr>
+    <tr>
+      <td>Who are you reporting <span class="prep-end">to</span>?</td>
+      <td class="corp-ex">Who does this brand manager report <span class="prep-end">to</span> directly?</td>
+      <td>report → <strong>to</strong></td>
+    </tr>
+    <tr>
+      <td>What are you focusing <span class="prep-end">on</span>?</td>
+      <td class="corp-ex">Which segment is the Pilão campaign focusing <span class="prep-end">on</span> this quarter?</td>
+      <td>focus / rely / depend → <strong>on</strong></td>
+    </tr>
+    <tr>
+      <td>What are you dealing <span class="prep-end">with</span>?</td>
+      <td class="corp-ex">What commodity challenge is the team dealing <span class="prep-end">with</span> right now?</td>
+      <td>deal / struggle → <strong>with</strong></td>
+    </tr>
+    <tr>
+      <td>Who did you hear that <span class="prep-end">from</span>?</td>
+      <td class="corp-ex">Which market did this insight come <span class="prep-end">from</span>?</td>
+      <td>hear / come → <strong>from</strong></td>
+    </tr>
+  </tbody>
+</table>
+<div class="tip tip-b" style="margin-top:.85rem"><strong>Dica C1</strong> Em inglês escrito formal (relatórios, e-mails corporativos) a preposição no final também é aceita e preferida. Só evite colocar no início quando for falar ou escrever para alguém de outro time ou empresa — soará rígido demais. <em>Which brand are you responsible for?</em> ✓ funciona em qualquer contexto.</div>
+</section>
+</div>
+</div>
+
+<!-- TAB 2 — PRÁTICA 1 LACUNAS -->
+<div class="page" id="t2">
+<div style="padding-top:2rem">
+<div class="prow"><div class="pwrap"><div class="pfill" id="pf1"></div></div><span class="ptxt" id="pl1">0 / 8</span></div>
+<section class="sec">
+<p class="sl">Prática 1 — qual preposição fecha a pergunta?</p>
+<p style="font-size:13px;color:var(--ink3);margin-bottom:1.5rem;font-style:italic">Escolha a preposição certa para completar cada pergunta. Contexto: reuniões, campanhas, estratégia de marcas.</p>
+
+<div class="qcard" id="q1a"><div class="qn">Questão 1</div><div class="qb">
+  <p class="qs">— "I just got off the phone." — "Oh really? Who were you talking <span class="blank" id="b1a">___</span>?"</p>
+  <div class="choices" id="c1a">
+    <button class="btn" data-q="q1a" data-blank="b1a" data-val="with" data-ans="to" data-msg="&lt;strong&gt;to&lt;/strong&gt; é a resposta mais natural. 'Talk &lt;em&gt;with&lt;/em&gt;' existe (e é mais comum no inglês americano), mas 'Who were you talking &lt;em&gt;to&lt;/em&gt;?' é a forma mais frequente e idiomática nas duas variantes para esse tipo de pergunta.">with</button>
+    <button class="btn" data-q="q1a" data-blank="b1a" data-val="to" data-ans="to" data-msg="&lt;strong&gt;to&lt;/strong&gt; ✓ — 'talk &lt;em&gt;to&lt;/em&gt; someone' — a preposição que acompanha 'talk' quando indica com quem você fala é sempre &lt;em&gt;to&lt;/em&gt; (ou &lt;em&gt;with&lt;/em&gt;, mas &lt;em&gt;to&lt;/em&gt; é mais comum na pergunta). No final da pergunta: 'Who were you talking &lt;em&gt;to&lt;/em&gt;?' — igual à frase modelo do exercício.">to</button>
+    <button class="btn" data-q="q1a" data-blank="b1a" data-val="at" data-ans="to" data-msg="&lt;strong&gt;to&lt;/strong&gt; é a resposta certa. 'Talk &lt;em&gt;at&lt;/em&gt; someone' tem um sentido diferente — significa falar sem dar espaço para resposta, quase 'dar sermão'. 'Talk &lt;em&gt;to&lt;/em&gt;' é a conversa normal.">at</button>
+  </div><div class="fb" id="fb1a"></div>
+</div></div>
+
+<div class="qcard" id="q2a"><div class="qn">Questão 2</div><div class="qb">
+  <p class="qctx">Contexto: reunião de briefing de campanha</p>
+  <p class="qs">Before we start the brief — who exactly is this Pilão campaign aimed <span class="blank" id="b2a">___</span>?</p>
+  <div class="choices" id="c2a">
+    <button class="btn" data-q="q2a" data-blank="b2a" data-val="for" data-ans="at" data-msg="&lt;strong&gt;at&lt;/strong&gt; é a resposta certa. 'Aim &lt;em&gt;for&lt;/em&gt;' significa buscar atingir uma meta ou objetivo ('we're aiming &lt;em&gt;for&lt;/em&gt; 20% growth'). Quando você fala de audiência ou público-alvo, o verbo é 'aimed &lt;em&gt;at&lt;/em&gt;'.">for</button>
+    <button class="btn" data-q="q2a" data-blank="b2a" data-val="to" data-ans="at" data-msg="&lt;strong&gt;at&lt;/strong&gt; é a resposta certa. 'Aim &lt;em&gt;to&lt;/em&gt;' seguiria um infinitivo ('we aim &lt;em&gt;to&lt;/em&gt; launch in Q3'). Para indicar o público ou alvo de uma campanha, sempre 'aimed &lt;em&gt;at&lt;/em&gt;'.">to</button>
+    <button class="btn" data-q="q2a" data-blank="b2a" data-val="at" data-ans="at" data-msg="&lt;strong&gt;at&lt;/strong&gt; ✓ — 'aim &lt;em&gt;at&lt;/em&gt; something/someone' = direcionar para um alvo específico. No contexto de campanhas: 'Who is this campaign aimed &lt;em&gt;at&lt;/em&gt;?' é exatamente o jeito correto de perguntar sobre o público-alvo. Compare: 'targeted &lt;em&gt;at&lt;/em&gt;', 'directed &lt;em&gt;at&lt;/em&gt;' — mesma preposição.">at</button>
+  </div><div class="fb" id="fb2a"></div>
+</div></div>
+
+<div class="qcard" id="q3a"><div class="qn">Questão 3</div><div class="qb">
+  <p class="qctx">Contexto: novo projeto de portfólio</p>
+  <p class="qs">I heard you're leading the Caboclo repositioning. Which agencies are you working <span class="blank" id="b3a">___</span> on this?</p>
+  <div class="choices" id="c3a">
+    <button class="btn" data-q="q3a" data-blank="b3a" data-val="on" data-ans="with" data-msg="&lt;strong&gt;with&lt;/strong&gt; é a resposta certa. 'Work &lt;em&gt;on&lt;/em&gt;' indica o projeto ou tarefa ('working &lt;em&gt;on&lt;/em&gt; the repositioning'). Mas a pergunta é sobre as agências — quem — então a preposição é &lt;em&gt;with&lt;/em&gt; (relação de parceria com pessoas/organizações).">on</button>
+    <button class="btn" data-q="q3a" data-blank="b3a" data-val="for" data-ans="with" data-msg="&lt;strong&gt;with&lt;/strong&gt; é a resposta certa. 'Work &lt;em&gt;for&lt;/em&gt;' indica onde você é empregado ('she works &lt;em&gt;for&lt;/em&gt; JDE Peet's'). Aqui a ideia é parceria ou colaboração — sempre &lt;em&gt;with&lt;/em&gt;.">for</button>
+    <button class="btn" data-q="q3a" data-blank="b3a" data-val="with" data-ans="with" data-msg="&lt;strong&gt;with&lt;/strong&gt; ✓ — 'work &lt;em&gt;with&lt;/em&gt; someone' = colaborar, trabalhar em parceria. É a preposição para relações de trabalho e parceria: 'work &lt;em&gt;with&lt;/em&gt; the agency', 'collaborate &lt;em&gt;with&lt;/em&gt; the team', 'deal &lt;em&gt;with&lt;/em&gt; the client'. Note: 'work &lt;em&gt;on&lt;/em&gt; something' = trabalhar em um projeto; 'work &lt;em&gt;with&lt;/em&gt; someone' = trabalhar com uma pessoa ou empresa.">with</button>
+  </div><div class="fb" id="fb3a"></div>
+</div></div>
+
+<div class="qcard" id="q4a"><div class="qn">Questão 4</div><div class="qb">
+  <p class="qctx">Contexto: estrutura de reporte</p>
+  <p class="qs">I'm not sure about the org structure here — who does the regional brand team report <span class="blank" id="b4a">___</span>?</p>
+  <div class="choices" id="c4a">
+    <button class="btn" data-q="q4a" data-blank="b4a" data-val="for" data-ans="to" data-msg="&lt;strong&gt;to&lt;/strong&gt; é a resposta certa. 'Report &lt;em&gt;for&lt;/em&gt;' existe em outro contexto: 'report &lt;em&gt;for&lt;/em&gt; duty' (apresentar-se para o serviço) ou 'report &lt;em&gt;for&lt;/em&gt; work' (chegar ao trabalho). Para hierarquia — quem você responde — é sempre 'report &lt;em&gt;to&lt;/em&gt;'.">for</button>
+    <button class="btn" data-q="q4a" data-blank="b4a" data-val="to" data-ans="to" data-msg="&lt;strong&gt;to&lt;/strong&gt; ✓ — 'report &lt;em&gt;to&lt;/em&gt; someone' é a estrutura fixa para hierarquia corporativa. 'Who do you report &lt;em&gt;to&lt;/em&gt;?' é uma das perguntas mais comuns em onboarding, entrevistas e reuniões de alinhamento. Nunca 'report &lt;em&gt;for&lt;/em&gt;' ou 'report &lt;em&gt;at&lt;/em&gt;' neste sentido.">to</button>
+    <button class="btn" data-q="q4a" data-blank="b4a" data-val="with" data-ans="to" data-msg="&lt;strong&gt;to&lt;/strong&gt; é a resposta certa. 'Report &lt;em&gt;with&lt;/em&gt;' não funciona para hierarquia. A única estrutura correta para indicar quem é o superior hierárquico é 'report &lt;em&gt;to&lt;/em&gt; someone'.">with</button>
+  </div><div class="fb" id="fb4a"></div>
+</div></div>
+
+<div class="qcard" id="q5a"><div class="qn">Questão 5</div><div class="qb">
+  <p class="qctx">Contexto: atraso em aprovação de campanha</p>
+  <p class="qs">The launch was supposed to be this week. What is the team still waiting <span class="blank" id="b5a">___</span>?</p>
+  <div class="choices" id="c5a">
+    <button class="btn" data-q="q5a" data-blank="b5a" data-val="on" data-ans="for" data-msg="&lt;strong&gt;for&lt;/strong&gt; é a resposta certa. 'Wait &lt;em&gt;on&lt;/em&gt; someone' existe mas significa servir alguém (como um garçom). No sentido de aguardar algo, a preposição é sempre &lt;em&gt;for&lt;/em&gt;.">on</button>
+    <button class="btn" data-q="q5a" data-blank="b5a" data-val="to" data-ans="for" data-msg="&lt;strong&gt;for&lt;/strong&gt; é a resposta certa. 'Wait &lt;em&gt;to&lt;/em&gt;' seguiria um infinitivo: 'waiting &lt;em&gt;to&lt;/em&gt; hear back'. No final de uma pergunta, a preposição de 'wait' é sempre &lt;em&gt;for&lt;/em&gt;: 'What are you waiting &lt;em&gt;for&lt;/em&gt;?'">to</button>
+    <button class="btn" data-q="q5a" data-blank="b5a" data-val="for" data-ans="for" data-msg="&lt;strong&gt;for&lt;/strong&gt; ✓ — 'wait &lt;em&gt;for&lt;/em&gt; something' — exatamente como o modelo do exercício: 'What are you waiting &lt;em&gt;for&lt;/em&gt;?' É a preposição fixa de 'wait'. Nunca 'wait &lt;em&gt;on&lt;/em&gt;' neste sentido (isso seria gíria americana muito informal: 'hold on').">for</button>
+  </div><div class="fb" id="fb5a"></div>
+</div></div>
+
+<div class="qcard" id="q6a"><div class="qn">Questão 6</div><div class="qb">
+  <p class="qctx">Contexto: desafio de commodities</p>
+  <p class="qs">Given the coffee price volatility — which suppliers is the procurement team currently negotiating <span class="blank" id="b6a">___</span>?</p>
+  <div class="choices" id="c6a">
+    <button class="btn" data-q="q6a" data-blank="b6a" data-val="for" data-ans="with" data-msg="&lt;strong&gt;with&lt;/strong&gt; é a resposta certa. 'Negotiate &lt;em&gt;for&lt;/em&gt;' indicaria o objetivo: 'negotiating &lt;em&gt;for&lt;/em&gt; better terms'. Aqui a pergunta é sobre com quem se negocia — então a preposição é &lt;em&gt;with&lt;/em&gt;.">for</button>
+    <button class="btn" data-q="q6a" data-blank="b6a" data-val="with" data-ans="with" data-msg="&lt;strong&gt;with&lt;/strong&gt; ✓ — 'negotiate &lt;em&gt;with&lt;/em&gt; someone' = negociar com uma parte. É sempre &lt;em&gt;with&lt;/em&gt; para indicar o parceiro de negociação: 'negotiate &lt;em&gt;with&lt;/em&gt; suppliers', 'deal &lt;em&gt;with&lt;/em&gt; stakeholders'. No final da pergunta: 'which suppliers is the team negotiating &lt;em&gt;with&lt;/em&gt;?' — a preposição fica encalhada no final, mas segue o verbo.">with</button>
+    <button class="btn" data-q="q6a" data-blank="b6a" data-val="on" data-ans="with" data-msg="&lt;strong&gt;with&lt;/strong&gt; é a resposta certa. 'Negotiate &lt;em&gt;on&lt;/em&gt;' pode aparecer para o assunto: 'negotiating &lt;em&gt;on&lt;/em&gt; price'. Mas quando a pergunta é 'which suppliers' — com quem — a preposição é &lt;em&gt;with&lt;/em&gt;.">on</button>
+  </div><div class="fb" id="fb6a"></div>
+</div></div>
+
+<div class="qcard" id="q7a"><div class="qn">Questão 7</div><div class="qb">
+  <p class="qctx">Contexto: foco de estratégia do quarter</p>
+  <p class="qs">With all these priorities, which consumer segment is the Pilão team really focusing <span class="blank" id="b7a">___</span> this quarter?</p>
+  <div class="choices" id="c7a">
+    <button class="btn" data-q="q7a" data-blank="b7a" data-val="at" data-ans="on" data-msg="&lt;strong&gt;on&lt;/strong&gt; é a resposta certa. 'Focus &lt;em&gt;at&lt;/em&gt;' não é uma colocação estabelecida. O verbo 'focus' sempre pede &lt;em&gt;on&lt;/em&gt;: focus &lt;em&gt;on&lt;/em&gt; a topic, focus &lt;em&gt;on&lt;/em&gt; a segment, focus &lt;em&gt;on&lt;/em&gt; results.">at</button>
+    <button class="btn" data-q="q7a" data-blank="b7a" data-val="for" data-ans="on" data-msg="&lt;strong&gt;on&lt;/strong&gt; é a resposta certa. 'Focus &lt;em&gt;for&lt;/em&gt;' não existe como colocação. A preposição fixa de 'focus' é sempre &lt;em&gt;on&lt;/em&gt;.">for</button>
+    <button class="btn" data-q="q7a" data-blank="b7a" data-val="on" data-ans="on" data-msg="&lt;strong&gt;on&lt;/strong&gt; ✓ — 'focus &lt;em&gt;on&lt;/em&gt; something' é a colocação fixa. 'Focusing &lt;em&gt;on&lt;/em&gt; the right segment', 'rely &lt;em&gt;on&lt;/em&gt; data', 'depend &lt;em&gt;on&lt;/em&gt; the results' — todos usam &lt;em&gt;on&lt;/em&gt;. No final da pergunta: 'Which segment is the team focusing &lt;em&gt;on&lt;/em&gt;?' ✓">on</button>
+  </div><div class="fb" id="fb7a"></div>
+</div></div>
+
+<div class="qcard" id="q8a"><div class="qn">Questão 8</div><div class="qb">
+  <p class="qctx">Contexto: insight de mercado</p>
+  <p class="qs">That's a really interesting data point about the Northeast. Which research did that finding come <span class="blank" id="b8a">___</span>?</p>
+  <div class="choices" id="c8a">
+    <button class="btn" data-q="q8a" data-blank="b8a" data-val="out" data-ans="from" data-msg="&lt;strong&gt;from&lt;/strong&gt; é a resposta certa. 'Come &lt;em&gt;out&lt;/em&gt; of' (com duas preposições) é possível: 'this came &lt;em&gt;out of&lt;/em&gt; the Q3 study'. Mas com apenas uma preposição no final de pergunta, o padrão é 'come &lt;em&gt;from&lt;/em&gt;'.">out</button>
+    <button class="btn" data-q="q8a" data-blank="b8a" data-val="from" data-ans="from" data-msg="&lt;strong&gt;from&lt;/strong&gt; ✓ — 'come &lt;em&gt;from&lt;/em&gt; somewhere/something' = a origem. 'Where did this come &lt;em&gt;from&lt;/em&gt;?', 'Which source did this data come &lt;em&gt;from&lt;/em&gt;?' — &lt;em&gt;from&lt;/em&gt; indica sempre ponto de partida ou origem. No final da pergunta funciona igual: 'Which research did that come &lt;em&gt;from&lt;/em&gt;?'">from</button>
+    <button class="btn" data-q="q8a" data-blank="b8a" data-val="of" data-ans="from" data-msg="&lt;strong&gt;from&lt;/strong&gt; é a resposta certa. 'Come &lt;em&gt;of&lt;/em&gt;' sozinho não é natural neste contexto. Para origem de uma informação ou dado, a preposição correta é 'come &lt;em&gt;from&lt;/em&gt;'.">of</button>
+  </div><div class="fb" id="fb8a"></div>
+</div></div>
+
+<div class="scr" id="scr1">
+  <p class="scr-t">Resultado — Prática 1</p>
+  <p class="scr-n" id="scr1-n">0/8</p>
+  <div class="sbar"><div class="sbar-f" id="scr1-bar"></div></div>
+  <p class="scr-m" id="scr1-m"></p>
+  <button class="rbtn" onclick="location.reload()">Tentar novamente</button>
+</div>
+</section>
+</div>
+</div>
+
+<!-- TAB 3 — PRÁTICA 2 ORDEM -->
+<div class="page" id="t3">
+<div style="padding-top:2rem">
+<section class="sec">
+<p class="sl">Prática 2 — monte a pergunta na ordem certa</p>
+<p style="font-size:13px;color:var(--ink3);margin-bottom:1.5rem;font-style:italic">Clique nas palavras para montá-las na ordem correta. A preposição vai sempre no final.</p>
+
+<div id="reorder-container"></div>
+
+<div class="scr" id="scr2">
+  <p class="scr-t">Resultado — Prática 2</p>
+  <p class="scr-n" id="scr2-n">0/5</p>
+  <div class="sbar"><div class="sbar-f" id="scr2-bar"></div></div>
+  <p class="scr-m" id="scr2-m"></p>
+  <button class="rbtn" onclick="location.reload()">Tentar novamente</button>
+</div>
+</section>
+</div>
+</div>
+
+<!-- TAB 4 — PRODUÇÃO -->
+<div class="page" id="t4">
+<div style="padding-top:2rem">
+<section class="sec">
+<p class="sl">Produção — escreva a pergunta</p>
+<p style="font-size:13px;color:var(--ink2);font-style:italic;margin-bottom:1.5rem">Transforme a situação em uma pergunta natural com a preposição no final. Contexto: conversas do dia a dia no trabalho.</p>
+
+<div class="prod-card">
+  <div class="prod-hd">Frase 1</div>
+  <div class="prod-b">
+    <p class="prod-prompt">Você quer saber com quem o David (colega de Londres) está colaborando no novo projeto de portfólio.</p>
+    <span class="prod-cue">collaborate with → Who / which team…?</span>
+    <textarea class="prod-ta" placeholder="Who / Which team is David collaborating ___?"></textarea>
+    <button class="show-btn" onclick="showModel('m1')">Ver exemplo</button>
+    <div class="model-ans" id="m1"><strong>Exemplo</strong>Which team is David collaborating with on the new portfolio project?<br><span style="color:var(--gold);font-size:12px">→ 'with' fica no final, depois de 'collaborating'. O 'on the new portfolio project' pode vir depois — não interfere na posição da preposição do verbo.</span></div>
+  </div>
+</div>
+
+<div class="prod-card">
+  <div class="prod-hd">Frase 2</div>
+  <div class="prod-b">
+    <p class="prod-prompt">Você quer saber qual segmento de consumidores a estratégia da Pilão está focando neste quarter.</p>
+    <span class="prod-cue">focus on → Which segment…?</span>
+    <textarea class="prod-ta" placeholder="Which segment is the Pilão strategy focusing ___?"></textarea>
+    <button class="show-btn" onclick="showModel('m2')">Ver exemplo</button>
+    <div class="model-ans" id="m2"><strong>Exemplo</strong>Which consumer segment is the Pilão strategy focusing on this quarter?<br><span style="color:var(--gold);font-size:12px">→ 'on' fica preso ao verbo 'focusing', no final da parte principal da pergunta.</span></div>
+  </div>
+</div>
+
+<div class="prod-card">
+  <div class="prod-hd">Frase 3</div>
+  <div class="prod-b">
+    <p class="prod-prompt">Você quer saber de qual escritório regional veio a ideia para a nova campanha do Caboclo.</p>
+    <span class="prod-cue">come from → Which office…?</span>
+    <textarea class="prod-ta" placeholder="Which office did the Caboclo campaign idea come ___?"></textarea>
+    <button class="show-btn" onclick="showModel('m3')">Ver exemplo</button>
+    <div class="model-ans" id="m3"><strong>Exemplo</strong>Which regional office did the Caboclo campaign idea come from?<br><span style="color:var(--gold);font-size:12px">→ 'from' fica no final. Note o auxiliar 'did' — pergunta no passado segue a estrutura normal, só a preposição fica "encalhada".</span></div>
+  </div>
+</div>
+
+<div class="prod-card">
+  <div class="prod-hd">Frase 4</div>
+  <div class="prod-b">
+    <p class="prod-prompt">Você quer saber qual desafio de commodities a equipe de procurement está lidando agora.</p>
+    <span class="prod-cue">deal with → What challenge…?</span>
+    <textarea class="prod-ta" placeholder="What challenge is the procurement team dealing ___?"></textarea>
+    <button class="show-btn" onclick="showModel('m4')">Ver exemplo</button>
+    <div class="model-ans" id="m4"><strong>Exemplo</strong>What commodity challenge is the procurement team dealing with right now?<br><span style="color:var(--gold);font-size:12px">→ 'with' prende ao verbo 'dealing'. Observe: mesmo com 'right now' no final, 'with' vem antes dele — ligado ao verbo, não ao tempo.</span></div>
+  </div>
+</div>
+
+<div class="prod-card">
+  <div class="prod-hd">Frase 5 — você escolhe o contexto</div>
+  <div class="prod-b">
+    <p class="prod-prompt">Escreva uma pergunta que você poderia fazer em uma reunião de alinhamento com o time de Londres. Use um dos verbos da tabela de referência.</p>
+    <span class="prod-cue">report to / rely on / ask for / aim at / present to</span>
+    <textarea class="prod-ta" placeholder="Sua pergunta aqui..."></textarea>
+    <button class="show-btn" onclick="showModel('m5')">Ver exemplos</button>
+    <div class="model-ans" id="m5"><strong>Exemplos possíveis</strong>
+Who does the local marketing team report to in terms of brand guidelines — the regional director or HQ?<br>
+What results is HQ relying on to decide the Brazil strategy for next year?<br>
+Which KPIs is the London team asking for in the quarterly review?<br>
+<span style="color:var(--gold);font-size:12px">→ Qualquer pergunta que coloque a preposição no final e faça sentido no contexto é válida.</span></div>
+  </div>
+</div>
+
+<div class="tip tip-g" style="margin-top:1.5rem"><strong>Check rápido</strong> Depois de escrever, pergunte: (1) tem um wh-word (who, what, which)? (2) tem auxiliar (is, does, did, are)? (3) a preposição está no final, ligada ao verbo? Se sim nos três — está certo.</div>
+</section>
+</div>
+</div>
+
+<!-- TAB 5 — SPEAKING -->
+<div class="page" id="t5">
+<div style="padding-top:2rem">
+<section class="sec">
+<p class="sl">Speaking — perguntas em contexto real</p>
+
+<div class="spcard">
+  <div class="spcard-hd"><span class="badge bg">Timer 45s</span><div><p class="stit">Responda a pergunta — e faça uma de volta</p><p class="smet">Foque em usar a preposição no final, naturalmente</p></div></div>
+  <div class="spbody">
+    <p class="instr">Leia o prompt — a pergunta foi feita para você. Responda em voz alta (30s). Depois, faça uma pergunta de volta usando a preposição indicada no final.</p>
+    <div class="tblock">
+      <div class="pbox">
+        <span class="ptag">Prompt 1 de 5</span>
+        <span class="ptext" id="sp-prompt">Someone on the London team asks: "Caroline, which brands are you currently responsible for in Brazil?"<br><br>→ Responda. Depois, faça uma pergunta de volta com: <strong>report to</strong></span>
+        <span class="phint" id="sp-hint">Modelo: "And who do you report to on the global side?"</span>
+      </div>
+      <div class="dialbox">
+        <svg class="tsvg" viewBox="0 0 88 88">
+          <circle class="ring-bg" cx="44" cy="44" r="34"/>
+          <circle class="ring-fill" id="sp-ring" cx="44" cy="44" r="34" stroke="#1a6a52" stroke-dasharray="214" stroke-dashoffset="0"/>
+        </svg>
+        <p class="tnum" id="sp-num">45</p>
+        <p class="tsub">seconds</p>
+      </div>
+      <div class="tbtns">
+        <button class="tbtn primary" id="sp-start" onclick="startTimer()">▶ Start</button>
+        <button class="tbtn" id="sp-reset" onclick="resetTimer()" disabled>↺ Reset</button>
+      </div>
+      <div class="tdone" id="sp-done"><strong>Time's up!</strong> A preposição ficou no final de forma natural? Se hesitou, repita o mesmo prompt.</div>
+      <div class="pnav-row" style="margin-top:.65rem">
+        <button class="pnav on" onclick="setP(0,this)">1</button>
+        <button class="pnav" onclick="setP(1,this)">2</button>
+        <button class="pnav" onclick="setP(2,this)">3</button>
+        <button class="pnav" onclick="setP(3,this)">4</button>
+        <button class="pnav" onclick="setP(4,this)">5</button>
+      </div>
+    </div>
+    <div class="tip tip-a" style="margin-top:.85rem"><strong>O teste da naturalidade</strong> Em inglês nativo, a preposição sai junto com o verbo sem pausa: <em>"Which brand is this aimed— [pausa] —at?"</em> ainda não está automático. O objetivo é <em>"Which brand is this aimed at?"</em> sem hesitação. Repita qualquer prompt onde isso acontecer.</div>
+  </div>
+</div>
+
+<div class="spcard">
+  <div class="spcard-hd"><span class="badge bb">Roleplay</span><div><p class="stit">Reunião de alinhamento com Londres</p><p class="smet">3 perguntas encadeadas · preposição sempre no final</p></div></div>
+  <div class="spbody">
+    <p class="instr">Você está em uma chamada com David (HQ Londres). Responda as perguntas dele e faça pelo menos uma pergunta de volta em cada troca. Alvo: usar 5 preposições no final de forma natural durante o roleplay.</p>
+    <div style="display:flex;flex-direction:column;gap:9px">
+      <div style="background:var(--bg);border:1px solid var(--s3);border-radius:10px;padding:12px 14px">
+        <p style="font-size:11px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px">David pergunta 1</p>
+        <p style="font-size:14px;color:var(--ink);line-height:1.65">"Caroline, which markets are you planning to focus on for the Pilão premium push?"</p>
+        <p style="font-size:12px;color:var(--blue);font-style:italic;margin-top:4px">→ Responda + pergunte de volta: ask for / look at</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--s3);border-radius:10px;padding:12px 14px">
+        <p style="font-size:11px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px">David pergunta 2</p>
+        <p style="font-size:14px;color:var(--ink);line-height:1.65">"Which agency are you currently working with on the Caboclo regional campaign?"</p>
+        <p style="font-size:12px;color:var(--blue);font-style:italic;margin-top:4px">→ Responda + pergunte de volta: report to / deal with</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--s3);border-radius:10px;padding:12px 14px">
+        <p style="font-size:11px;font-weight:700;color:var(--acc);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px">David pergunta 3</p>
+        <p style="font-size:14px;color:var(--ink);line-height:1.65">"We need to understand the commodity challenge better. What data are you working with on the pricing side?"</p>
+        <p style="font-size:12px;color:var(--blue);font-style:italic;margin-top:4px">→ Responda + pergunte de volta: rely on / come from</p>
+      </div>
+    </div>
+    <div class="tip tip-g" style="margin-top:.85rem"><strong>Meta</strong> 5 preposições no final sem hesitação. Não importa se a resposta é longa ou curta — importa que as preposições saiam naturais.</div>
+  </div>
+</div>
+</section>
+</div>
+</div>
+
+<footer class="footer">
+  <span>Prepositions at the End · Questions · Caroline · JDE Peet's</span>
+  <span>C1 · talk to · aim at · work with · wait for · report to · focus on</span>
+</footer>
+
+<script>
+function go(id,btn){
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("on"));
+  document.querySelectorAll(".tab").forEach(b=>b.classList.remove("on"));
+  document.getElementById(id).classList.add("on");
+  btn.classList.add("on");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function showModel(id){document.getElementById(id).classList.toggle("show")}
+
+// Practice 1
+const S1={total:8,answered:0,correct:0};
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll(".btn[data-q]").forEach(b=>b.addEventListener("click",()=>pick(b)));
+  buildReorder();
+});
+function pick(btn){
+  const qid=btn.dataset.q,blankId=btn.dataset.blank||"",chosen=btn.dataset.val,answer=btn.dataset.ans,msg=btn.dataset.msg;
+  const card=document.getElementById(qid);
+  if(!card||card.dataset.done)return;
+  card.dataset.done="true";
+  card.querySelectorAll(".btn[data-q]").forEach(b=>b.setAttribute("disabled",true));
+  const idx=qid.replace("q","").replace("a","");
+  const fbid="fb"+idx+"a";
+  const fb=document.getElementById(fbid);
+  const ok=chosen===answer;
+  if(blankId){const bl=document.getElementById(blankId);if(bl){bl.textContent=answer;bl.className="blank "+(ok?"ok":"err");}}
+  card.className="qcard "+(ok?"ok":"err");
+  if(ok){btn.classList.add("ok");fb.className="fb show fb-ok";fb.innerHTML="<strong>Correto!</strong> "+msg;}
+  else{btn.classList.add("err");card.querySelectorAll(".btn[data-q]").forEach(b=>{if(b.dataset.val===answer)b.classList.add("rv");});fb.className="fb show fb-err";fb.innerHTML="<strong>Não exatamente.</strong> "+msg;}
+  S1.answered++;if(ok)S1.correct++;
+  document.getElementById("pf1").style.width=Math.round(S1.answered/S1.total*100)+"%";
+  document.getElementById("pl1").textContent=S1.answered+" / "+S1.total;
+  if(S1.answered>=S1.total)showScore(1);
+}
+function showScore(n){
+  const s=n===1?S1:S2,total=s.total,correct=s.correct;
+  const c=document.getElementById("scr"+n);c.className="scr show";
+  document.getElementById("scr"+n+"-n").textContent=correct+" / "+total;
+  setTimeout(()=>document.getElementById("scr"+n+"-bar").style.width=Math.round(correct/total*100)+"%",150);
+  const msgs=[[total-1,"Excelente — essas preposições já saem naturais."],[Math.floor(total*0.7),"Bom trabalho. Releia o feedback dos erros e repita."],[0,"Continue praticando — com repetição fica automático."]];
+  document.getElementById("scr"+n+"-m").textContent=(msgs.find(m=>correct>=m[0])||msgs[2])[1];
+  c.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+// Reorder
+const reorderQ=[
+  {ctx:"Alinhamento de estratégia global",words:["Which","segment","is","the","Caboclo","campaign","aimed","at","?"],ans:["Which","segment","is","the","Caboclo","campaign","aimed","at","?"]},
+  {ctx:"Estrutura de reporte",words:["does","Who","directly","to","the","brand","manager","report","?"],ans:["Who","does","the","brand","manager","report","to","directly","?"]},
+  {ctx:"Desafio de fornecedores",words:["the","Which","team","dealing","is","commodity","challenge","with","?"],ans:["Which","commodity","challenge","is","the","team","dealing","with","?"]},
+  {ctx:"Origem de insight",words:["this","finding","did","come","Which","research","from","?"],ans:["Which","research","did","this","finding","come","from","?"]},
+  {ctx:"Foco de quarter",words:["is","on","consumer","segment","Which","the","Pilão","strategy","focusing","?"],ans:["Which","consumer","segment","is","the","Pilão","strategy","focusing","on","?"]}
+];
+const S2={total:reorderQ.length,answered:0,correct:0};
+function shuffleArr(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function buildReorder(){
+  const cont=document.getElementById("reorder-container");
+  reorderQ.forEach((q,qi)=>{
+    const shuffled=shuffleArr([...q.words]);
+    const card=document.createElement("div");card.className="qcard";card.id="rq"+qi;
+    const qn=document.createElement("div");qn.className="qn";qn.textContent="Questão "+(qi+1);
+    const qb=document.createElement("div");qb.className="qb";
+    if(q.ctx){const ctx=document.createElement("p");ctx.className="qctx";ctx.textContent=q.ctx;qb.appendChild(ctx);}
+    const pool=document.createElement("div");pool.className="word-pool";pool.id="pool"+qi;
+    const slots=document.createElement("div");slots.className="answer-slots";slots.id="slots"+qi;
+    const slotLabel=document.createElement("span");slotLabel.className="slot-label";slotLabel.textContent="→";
+    slots.appendChild(slotLabel);
+    shuffled.forEach(w=>{
+      const chip=document.createElement("button");chip.className="wchip";chip.textContent=w;
+      chip.onclick=()=>{
+        const card2=document.getElementById("rq"+qi);if(card2.dataset.done)return;
+        chip.classList.add("placed");pool.removeChild(chip);
+        const newChip=document.createElement("button");newChip.className="wchip placed";newChip.textContent=w;
+        newChip.onclick=()=>{
+          const card3=document.getElementById("rq"+qi);if(card3.dataset.done)return;
+          newChip.remove();chip.classList.remove("placed");pool.appendChild(chip);
+          checkBtn.disabled=Array.from(slots.querySelectorAll(".wchip")).length===0;
+        };
+        slots.appendChild(newChip);
+        checkBtn.disabled=false;
+      };
+      pool.appendChild(chip);
+    });
+    const checkBtn=document.createElement("button");checkBtn.className="check-btn";checkBtn.textContent="Verificar";checkBtn.disabled=true;
+    const fb=document.createElement("div");fb.className="fb";fb.id="rfb"+qi;
+    checkBtn.onclick=()=>{
+      const card2=document.getElementById("rq"+qi);if(card2.dataset.done)return;
+      const placed=Array.from(slots.querySelectorAll(".wchip")).map(c=>c.textContent);
+      const correct=JSON.stringify(placed)===JSON.stringify(q.ans);
+      card2.dataset.done="true";checkBtn.disabled=true;
+      slots.querySelectorAll(".wchip").forEach((c,i)=>{c.className="wchip "+(q.ans[i]&&c.textContent===q.ans[i]?"correct":"wrong");});
+      fb.className="fb show "+(correct?"fb-ok":"fb-err");
+      if(correct){fb.innerHTML="<strong>Correto!</strong> "+q.ans.join(" ");}
+      else{fb.innerHTML="<strong>Não exatamente.</strong> Ordem certa: <strong>"+q.ans.join(" ")+"</strong><br><span style='font-size:12px'>Lembre: a preposição fica no final, presa ao verbo.</span>";}
+      S2.answered++;if(correct)S2.correct++;
+      if(S2.answered>=S2.total)showScore(2);
+    };
+    qb.appendChild(pool);qb.appendChild(slots);qb.appendChild(checkBtn);qb.appendChild(fb);
+    card.appendChild(qn);card.appendChild(qb);
+    cont.appendChild(card);
+  });
+}
+
+// Timer
+const CIRC=2*Math.PI*34,SECS=45;
+let rem=SECS,running=false,iv=null;
+const prompts=[
+  {text:'Someone on the London team asks: "Caroline, which brands are you currently responsible for in Brazil?"\n\n→ Responda. Depois, faça uma pergunta de volta com: report to',hint:'Modelo: "And who do you report to on the global side?"'},
+  {text:'During a strategy call: "What market challenges are you currently dealing with in the Northeast region?"\n\n→ Responda. Depois, faça uma pergunta de volta com: focus on',hint:'Modelo: "And which segment is HQ focusing on globally right now?"'},
+  {text:'A new colleague asks: "Who is the Pilão launch campaign mainly aimed at this quarter?"\n\n→ Responda. Depois, faça uma pergunta de volta com: come from',hint:'Modelo: "Which research did that targeting strategy come from?"'},
+  {text:'In a planning meeting: "Which suppliers are you currently negotiating with on the commodity side?"\n\n→ Responda. Depois, faça uma pergunta de volta com: rely on',hint:'Modelo: "What data is the procurement team relying on for those negotiations?"'},
+  {text:'Career conversation: "Who did you work with most closely on your biggest brand project?"\n\n→ Responda. Depois, faça uma pergunta de volta com: ask for',hint:'Modelo: "What kind of support did you ask for from HQ during that project?"'}
+];
+function setP(idx,btn){resetTimer();document.getElementById("sp-prompt").textContent=prompts[idx].text;document.getElementById("sp-hint").textContent=prompts[idx].hint;document.querySelectorAll(".pnav").forEach(b=>b.classList.remove("on"));btn.classList.add("on");}
+function startTimer(){if(running)return;running=true;document.getElementById("sp-start").setAttribute("disabled",true);document.getElementById("sp-reset").removeAttribute("disabled");document.getElementById("sp-done").classList.remove("show");iv=setInterval(()=>{rem--;updateDial();if(rem<=0){clearInterval(iv);running=false;document.getElementById("sp-start").removeAttribute("disabled");document.getElementById("sp-done").classList.add("show");}},1000);}
+function resetTimer(){clearInterval(iv);running=false;rem=SECS;updateDial();document.getElementById("sp-start").removeAttribute("disabled");document.getElementById("sp-reset").setAttribute("disabled",true);document.getElementById("sp-done").classList.remove("show");}
+function updateDial(){const n=document.getElementById("sp-num"),r=document.getElementById("sp-ring");n.textContent=rem;n.className="tnum"+(rem<=10?" hot":"");r.style.strokeDashoffset=CIRC*(1-rem/SECS);r.style.stroke=rem<=10?"#9a1a1a":rem<=15?"#8a6010":"#1a6a52";}
+updateDial();
+</script>
+</body>
+</html>
